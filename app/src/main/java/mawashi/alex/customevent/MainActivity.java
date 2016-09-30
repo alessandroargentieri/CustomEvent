@@ -9,7 +9,6 @@ public class MainActivity extends AppCompatActivity {
 
     EventLauncher eventLauncher;
     EventListener eventListener;
-    EventListener2 eventListener2;
 
 
     @Override
@@ -18,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         eventListener = new EventListener();
-        eventListener2 = new EventListener2();
 
-        eventLauncher = new EventLauncher(eventListener);
+        //notiamo come gli passiamo un Listener implementato, anche se la classe EventLauncher vorrebbe un'interfaccia
+        eventLauncher = new EventLauncher(eventListener); //si associa un solo ascoltatore, non una lista come in Observable/Observer
         // eventLauncher = new EventLauncher();
 
     }
