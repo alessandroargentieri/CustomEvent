@@ -9,6 +9,8 @@ public class MainActivity extends AppCompatActivity {
 
     EventLauncher eventLauncher;
     EventListener eventListener;
+    EventListener2 eventListener2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,8 +18,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         eventListener = new EventListener();
+        eventListener2 = new EventListener2();
+
         eventLauncher = new EventLauncher(eventListener);
-       // eventLauncher = new EventLauncher();
+        // eventLauncher = new EventLauncher();
 
     }
 

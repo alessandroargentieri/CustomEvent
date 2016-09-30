@@ -16,6 +16,7 @@ public class ApplicationClass extends Application {
         appContext = getApplicationContext();
     }
 
+    //essendo statico sia il metodo che il contesto dichiarato, per richiamarlo non ho bisogno di istanziare ApplicationClass
     public static Context getContext() {
         return appContext;
     }
